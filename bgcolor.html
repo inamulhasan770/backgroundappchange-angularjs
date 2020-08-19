@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change the BG</title>
+  <script src="javascript/angularjs.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+  <p>Enter a color or color code : <input type="text" ng-model="mycol"></p>
+ <h1>Color : {{mycol}}</h1>
+  
+<style>
+body {
+	background-color: {{mycol}};
+}
+</style>  
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+	$scope.mycol="red";
+});
+</script>
+</div>
+</body>
+</html>
